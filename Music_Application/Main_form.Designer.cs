@@ -34,6 +34,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.News_track_table = new System.Windows.Forms.TableLayoutPanel();
             this.charts_tab = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Charts_track_table = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Charts_album_table = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.artists_tab = new System.Windows.Forms.TabPage();
             this.Art_artisits_table = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,7 +50,6 @@
             this.Tr_track_table = new System.Windows.Forms.TableLayoutPanel();
             this.playlists_tab = new System.Windows.Forms.TabPage();
             this.MyPl_pl_table = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.MyPl_track_table = new System.Windows.Forms.TableLayoutPanel();
@@ -64,6 +69,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tab_panel.SuspendLayout();
             this.news_tab.SuspendLayout();
+            this.charts_tab.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.artists_tab.SuspendLayout();
             this.tracks_tab.SuspendLayout();
             this.playlists_tab.SuspendLayout();
@@ -88,6 +96,7 @@
             // 
             // news_tab
             // 
+            this.news_tab.AutoScroll = true;
             this.news_tab.Controls.Add(this.label9);
             this.news_tab.Controls.Add(this.News_track_table);
             this.news_tab.Location = new System.Drawing.Point(4, 22);
@@ -123,6 +132,10 @@
             // 
             // charts_tab
             // 
+            this.charts_tab.Controls.Add(this.panel2);
+            this.charts_tab.Controls.Add(this.panel1);
+            this.charts_tab.Controls.Add(this.label11);
+            this.charts_tab.Controls.Add(this.label10);
             this.charts_tab.ForeColor = System.Drawing.SystemColors.ControlText;
             this.charts_tab.Location = new System.Drawing.Point(4, 22);
             this.charts_tab.Name = "charts_tab";
@@ -131,6 +144,70 @@
             this.charts_tab.TabIndex = 1;
             this.charts_tab.Text = "Популярное";
             this.charts_tab.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.Charts_track_table);
+            this.panel2.Location = new System.Drawing.Point(375, 58);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 209);
+            this.panel2.TabIndex = 15;
+            // 
+            // Charts_track_table
+            // 
+            this.Charts_track_table.AutoSize = true;
+            this.Charts_track_table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.Charts_track_table.ColumnCount = 1;
+            this.Charts_track_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Charts_track_table.Location = new System.Drawing.Point(3, 3);
+            this.Charts_track_table.Name = "Charts_track_table";
+            this.Charts_track_table.RowCount = 1;
+            this.Charts_track_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Charts_track_table.Size = new System.Drawing.Size(155, 20);
+            this.Charts_track_table.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.Charts_album_table);
+            this.panel1.Location = new System.Drawing.Point(37, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 209);
+            this.panel1.TabIndex = 14;
+            // 
+            // Charts_album_table
+            // 
+            this.Charts_album_table.AutoSize = true;
+            this.Charts_album_table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.Charts_album_table.ColumnCount = 1;
+            this.Charts_album_table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Charts_album_table.Location = new System.Drawing.Point(3, 3);
+            this.Charts_album_table.Name = "Charts_album_table";
+            this.Charts_album_table.RowCount = 1;
+            this.Charts_album_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Charts_album_table.Size = new System.Drawing.Size(155, 20);
+            this.Charts_album_table.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(371, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 24);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Топ 10 треков:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(33, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 24);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Топ 10 альбомов:";
             // 
             // artists_tab
             // 
@@ -172,11 +249,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(552, 8);
+            this.label8.Location = new System.Drawing.Point(532, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.Size = new System.Drawing.Size(99, 13);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Исполнители:";
+            this.label8.Text = "Название группы:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Art_track_table
             // 
@@ -230,7 +308,6 @@
             // 
             this.playlists_tab.AutoScroll = true;
             this.playlists_tab.Controls.Add(this.MyPl_pl_table);
-            this.playlists_tab.Controls.Add(this.button1);
             this.playlists_tab.Controls.Add(this.label5);
             this.playlists_tab.Controls.Add(this.label4);
             this.playlists_tab.Controls.Add(this.MyPl_track_table);
@@ -253,16 +330,6 @@
             this.MyPl_pl_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.MyPl_pl_table.Size = new System.Drawing.Size(99, 20);
             this.MyPl_pl_table.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(122, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -410,6 +477,7 @@
             this.Player_play_button.Size = new System.Drawing.Size(32, 32);
             this.Player_play_button.TabIndex = 1;
             this.Player_play_button.UseVisualStyleBackColor = true;
+            this.Player_play_button.Click += new System.EventHandler(this.Player_play_button_Click);
             // 
             // Player_pause_button
             // 
@@ -420,6 +488,7 @@
             this.Player_pause_button.Size = new System.Drawing.Size(32, 32);
             this.Player_pause_button.TabIndex = 2;
             this.Player_pause_button.UseVisualStyleBackColor = true;
+            this.Player_pause_button.Click += new System.EventHandler(this.Player_pause_button_Click);
             // 
             // Player_TrackName_label
             // 
@@ -448,6 +517,12 @@
             this.tab_panel.ResumeLayout(false);
             this.news_tab.ResumeLayout(false);
             this.news_tab.PerformLayout();
+            this.charts_tab.ResumeLayout(false);
+            this.charts_tab.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.artists_tab.ResumeLayout(false);
             this.artists_tab.PerformLayout();
             this.tracks_tab.ResumeLayout(false);
@@ -472,7 +547,6 @@
         private System.Windows.Forms.TabPage playlists_tab;
         private System.Windows.Forms.TabPage config_page;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel MyPl_track_table;
@@ -497,5 +571,11 @@
         private System.Windows.Forms.Button Player_pause_button;
         private System.Windows.Forms.Label Player_TrackName_label;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TableLayoutPanel Charts_track_table;
+        private System.Windows.Forms.TableLayoutPanel Charts_album_table;
     }
 }

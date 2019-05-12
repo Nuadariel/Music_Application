@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Music_Application
 {
@@ -14,9 +15,17 @@ namespace Music_Application
     {
         private string login;
         private string password;
+        private string connStr = "server=localhost;user=root;database=musicdb;password=root;";
+        private MySqlConnection conn;
+        private string sql;
+        private string avatar_path;
+        private string id;
+        bool is_found = false;
         public Form1()
         {
             InitializeComponent();
+            conn = new MySqlConnection(connStr);
+            conn.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,10 +39,23 @@ namespace Music_Application
             else
             {
                 //if exists
-                if (true)
+                sql = "SELECT * FROM user WHERE login = '"+login+"' and pwd = '"+password+"';";
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    new Main_form(login, password).Show();
+                    is_found = true;
+                    avatar_path = reader[3].ToString();
+                    id = reader[0].ToString();
+                }
+                reader.Close();
+                if (is_found)
+                {
+                    conn.Close();
                     this.Hide();
+                    new Main_form(login, password,avatar_path,id).ShowDialog();
+                    
+                    Dispose();
                 }
                 else
                 {

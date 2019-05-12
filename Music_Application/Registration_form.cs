@@ -15,6 +15,7 @@ namespace Music_Application
         private string avatar_patch="default";
         private string login;
         private string password;
+
         public Registration_form()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace Music_Application
                 //MessageBox.Show(avatar_patch);
                 avatar_picturebox.Image = new Bitmap(avatar_patch);
             }
+            //add to bd
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
